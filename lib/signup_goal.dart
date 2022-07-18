@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:motiva8/signup_goal.dart';
-import 'package:motiva8/widgets/age_toggle_widget.dart';
+import 'package:motiva8/widgets/goal_toggle_widget.dart';
 
-class SignUpAge extends StatelessWidget {
-  const SignUpAge({Key? key}) : super(key: key);
+class SignUpGoal extends StatelessWidget {
+  const SignUpGoal({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +39,7 @@ class SignUpAge extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          width: 100,
+                          width: 200,
                           height: 18,
                           decoration: BoxDecoration(
                             color: Color.fromRGBO(255, 178, 0, 1.0),
@@ -57,7 +56,7 @@ class SignUpAge extends StatelessWidget {
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    "How old are you?",
+                    "What is your goal with Motiva8?",
                     style: GoogleFonts.rubik(
                       color: Colors.white,
                       fontSize: 24,
@@ -68,8 +67,8 @@ class SignUpAge extends StatelessWidget {
                 SizedBox(
                   height: 35,
                 ),
-                AgeToggle(),
-                SizedBox(height: 260),
+                GoalToggle(),
+                SizedBox(height: 180),
                 Text(
                   "Let us get to know you!",
                   style: GoogleFonts.rubik(
@@ -82,12 +81,7 @@ class SignUpAge extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => SignUpGoal(),
-                      ),
-                    );
+                    print("pressed");
                   },
                   child: Container(
                     width: 351,
