@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:motiva8/signup_age.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +43,10 @@ class SignInPage extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    print("pressed");
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SignUpAge()),
+                    );
                   },
                   child: Container(
                     width: 351,
