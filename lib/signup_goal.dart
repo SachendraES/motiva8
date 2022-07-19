@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:motiva8/loading_page.dart';
 import 'package:motiva8/widgets/goal_toggle_widget.dart';
 
 class SignUpGoal extends StatelessWidget {
@@ -81,7 +82,12 @@ class SignUpGoal extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    print("pressed");
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoadingPage(),
+                      ),
+                    );
                   },
                   child: Container(
                     width: 351,

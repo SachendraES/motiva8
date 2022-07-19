@@ -61,6 +61,8 @@ flutter:
   assets:
      - assets/astroBoySit.png
      - assets/Motiva8.png
+     - assets/astroBoyBalloon.png
+     - assets/astroBoyRocket.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
