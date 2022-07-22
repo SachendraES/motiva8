@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:motiva8/reports_page.dart';
 import 'package:motiva8/signup_age.dart';
+import 'package:motiva8/widgets/slider_widget.dart';
 
-class LiftoffPage extends StatelessWidget {
-  const LiftoffPage({Key? key}) : super(key: key);
+class LogPage extends StatelessWidget {
+  const LogPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+
+    double width = size.width;
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Color.fromRGBO(9, 12, 48, 1.0),
@@ -16,62 +19,53 @@ class LiftoffPage extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(
-                  height: 70,
-                ),
-                Text(
-                  "And we have a",
-                  style: GoogleFonts.rubik(
-                      color: Color.fromRGBO(255, 178, 0, 1.0),
-                      fontSize: 38,
-                      fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  height: 1,
-                ),
-                Text(
-                  "lift off!",
-                  style: GoogleFonts.rubik(
-                      color: Color.fromRGBO(255, 178, 0, 1.0),
-                      fontSize: 38,
-                      fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
                   height: 100,
                 ),
-                Image.asset('assets/astroBoyRocket.png'),
+                Image.asset('assets/astroBoycoffee.png'),
                 SizedBox(
-                  height: 30,
-                ),
-                SizedBox(
-                  height: 80,
+                  height: 25,
                 ),
                 Text(
-                  "We have designed a journey map ",
-                  style: GoogleFonts.rubik(color: Colors.white, fontSize: 16),
+                  "How energetic are you now?",
+                  style: GoogleFonts.rubik(
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
-                  height: 1,
+                  height: 20,
                 ),
-                Text(
-                  "Just for you.Let us show you around",
-                  style: GoogleFonts.rubik(color: Colors.white, fontSize: 16),
+                Padding(
+                  padding: const EdgeInsets.only(left: 30),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "Drag to record your energy levels",
+                      style:
+                          GoogleFonts.rubik(color: Colors.white, fontSize: 16),
+                    ),
+                  ),
                 ),
                 SizedBox(
-                  height: 40,
+                  height: 20,
+                ),
+                SliderWidget(),
+                SizedBox(
+                  height: 200,
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ReportsPage()),
-                    );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(builder: (context) => SignUpAge()),
+                    // );
                   },
                   child: Container(
                     width: 351,
                     height: 52,
                     child: Center(
                       child: Text(
-                        "CONTINUE",
+                        "I am done",
                         style: GoogleFonts.rubik(
                             color: Color.fromRGBO(9, 12, 48, 1.0),
                             fontSize: 15,
