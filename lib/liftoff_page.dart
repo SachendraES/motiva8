@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:motiva8/bottom_navigation.dart';
 import 'package:motiva8/reports_page.dart';
 import 'package:motiva8/signup_age.dart';
 
@@ -63,7 +64,7 @@ class LiftoffPage extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ReportsPage()),
+                      MaterialPageRoute(builder: (context) => BottomNav()),
                     );
                   },
                   child: Container(

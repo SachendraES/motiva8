@@ -51,7 +51,30 @@ class LogPage extends StatelessWidget {
                 ),
                 SliderWidget(),
                 SizedBox(
-                  height: 200,
+                  height: 20,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 30, right: 30),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 46, 50, 86),
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                    ),
+                    height: 140,
+                    child: TextField(
+                      style:
+                          GoogleFonts.rubik(color: Colors.white, fontSize: 16),
+                      decoration: InputDecoration(
+                        hintText: 'Add note',
+                        hintStyle: TextStyle(color: Colors.grey),
+                        contentPadding:
+                            EdgeInsets.symmetric(vertical: 20, horizontal: 15),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
                 ),
                 GestureDetector(
                   onTap: () {

@@ -93,7 +93,7 @@ class ReportsPage extends StatelessWidget {
               ),
               GraphWidget(),
               SizedBox(
-                height: 200,
+                height: 20,
               ),
               GestureDetector(
                 onTap: () {
@@ -115,7 +115,8 @@ class ReportsPage extends StatelessWidget {
                     ),
                   ),
                   decoration: BoxDecoration(
-                    border: Border.all(color: Color.fromRGBO(91, 94, 117, 1.0)),
+                    border: Border.all(
+                        color: Color.fromRGBO(255, 178, 0, 1.0), width: 4),
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                   ),
                 ),
